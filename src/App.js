@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Portfolio from './components/PayamBeigi/Portfolio';
 import './App.css';
 
-export default function App() {
+function App() {
 
     return (
       <>
@@ -18,3 +18,4 @@ export default function App() {
     );
 }
 
+export default App;
