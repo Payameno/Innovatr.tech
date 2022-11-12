@@ -1,37 +1,32 @@
-import React from "react";
-import "../assets/nav.css"
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Navbar() {
-
   return (
-
-    <nav className="navbar">
-        <div>
-          <a>
-            <img src="images/logo.png" alt="logo image" />
-          </a>
-          <button>
-            <span></span>
-          </button>
-          <div>
-            <ul>
-              <li><a aria-current="page" href="#">Home</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Connect</a>
-              </li>
-            </ul>
-            <button type="button">
-              +1 728365413
-              <span>
-                <i></i>
-              </span>
-            </button>
-          </div>
-        </div>
-      </nav>
- 
-  )
-  
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
 }
