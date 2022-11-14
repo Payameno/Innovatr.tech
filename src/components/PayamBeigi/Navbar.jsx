@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import '../../styles/navbar.css'
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -46,7 +47,7 @@ function Navbar (props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box className='nav' sx={{ display: 'flex' }}>
       <AppBar style={{ background: 'linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95))' }} component="nav">
         <Toolbar>
           <IconButton
@@ -92,70 +93,6 @@ function Navbar (props) {
         >
           {drawer}
         </Drawer>
-      </Box>
-      <Box component="main">
-        <Toolbar />
-        <Typography>
-          <Box  style={{ background: 'linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95))', width: '100%', height: '100%' }} >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-          fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-          aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
-          cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
-          at ab sequi qui modi delectus quia corrupti alias distinctio nostrum.
-          </Box>
-          <Box sx={{ p: 3 }}>
-            <h1>Section1</h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-          fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-          aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
-          cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
-          at ab sequi qui modi delectus quia corrupti alias distinctio nostrum.
-          Minima ex dolor modi inventore sapiente necessitatibus aliquam fuga et. Sed
-          numquam quibusdam at officia sapiente porro maxime corrupti perspiciatis
-          asperiores, exercitationem eius nostrum consequuntur iure aliquam itaque,
-          assumenda et! Quibusdam temporibus beatae doloremque voluptatum doloribus
-          soluta accus
-          </Box>
-          <Box sx={{ p: 3 }}>
-            <h1>Section2</h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-          fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-          aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
-          cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
-          at ab sequi qui modi delectus quia corrupti alias distinctio nostrum.
-          Minima ex dolor modi inventore sapiente necessitatibus aliquam fuga et. Sed
-          numquam quibusdam at officia sapiente porro maxime corrupti perspiciatis
-          asperiores, exercitationem eius nostrum consequuntur iure aliquam itaque,
-          assumenda et! Quibusdam temporibus beatae doloremque voluptatum doloribus
-          soluta accus
-          </Box>
-          <Box sx={{ p: 3 }}>
-            <h1>Section3</h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-          fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-          aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
-          cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
-          at ab sequi qui modi delectus quia corrupti alias distinctio nostrum.
-          Minima ex dolor modi inventore sapiente necessitatibus aliquam fuga et. Sed
-          numquam quibusdam at officia sapiente porro maxime corrupti perspiciatis
-          asperiores, exercitationem eius nostrum consequuntur iure aliquam itaque,
-          assumenda et! Quibusdam temporibus beatae doloremque voluptatum doloribus
-          soluta accus
-          </Box>
-          <Box sx={{ p: 3 }}>
-            <h1>Section4</h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-          fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-          aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
-          cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
-          at ab sequi qui modi delectus quia corrupti alias distinctio nostrum.
-          Minima ex dolor modi inventore sapiente necessitatibus aliquam fuga et. Sed
-          numquam quibusdam at officia sapiente porro maxime corrupti perspiciatis
-          asperiores, exercitationem eius nostrum consequuntur iure aliquam itaque,
-          assumenda et! Quibusdam temporibus beatae doloremque voluptatum doloribus
-          soluta accus
-          </Box>
-        </Typography>
       </Box>
     </Box>
   );

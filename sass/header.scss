@@ -1,0 +1,82 @@
+.header {
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  width: 100%;
+  height: 90vh;
+}
+
+/**
+* wavy border generated using shapedivider.app
+**/
+.bottom-wavy-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.bottom-wavy-border svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 109px;
+  transform: rotateY(180deg);
+}
+
+.bottom-wavy-border .shape-fill {
+  fill: #F77F00;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bottom-wavy-border svg {
+      width: calc(100% + 1.3px);
+      height: 67px;
+  }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .bottom-wavy-border svg {
+      width: calc(100% + 1.3px);
+      height: 41px;
+  }
+}
+
+.custom-shape-divider-top-1668260886 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1668260886 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 109px;
+}
+
+.custom-shape-divider-top-1668260886 .shape-fill {
+  fill: #F77F00;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-top-1668260886 svg {
+      width: calc(100% + 1.3px);
+      height: 67px;
+  }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1668260886 svg {
+      width: calc(100% + 1.3px);
+      height: 41px;
+  }
+}
