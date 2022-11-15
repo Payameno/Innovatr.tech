@@ -44,39 +44,3 @@
       height: 41px;
   }
 }
-
-.custom-shape-divider-top-1668260886 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1668260886 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 109px;
-}
-
-.custom-shape-divider-top-1668260886 .shape-fill {
-  fill: #F77F00;
-}
-
-/** For tablet devices **/
-@media (min-width: 768px) and (max-width: 1023px) {
-  .custom-shape-divider-top-1668260886 svg {
-      width: calc(100% + 1.3px);
-      height: 67px;
-  }
-}
-
-/** For mobile devices **/
-@media (max-width: 767px) {
-  .custom-shape-divider-top-1668260886 svg {
-      width: calc(100% + 1.3px);
-      height: 41px;
-  }
-}
