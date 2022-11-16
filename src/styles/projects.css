@@ -35,12 +35,12 @@
   height: 220px;
   margin-bottom: 3.1em;
   border-radius: 15px 55px;
-  border: 5px solid rgb(65, 47, 66);
+  border: 5px solid rgb(178, 106, 182);
   transition: 0.5s;
 }
 .project-block .inner-container:hover {
   transition: 0.5s;
-  box-shadow: rgb(77, 60, 74) 7px 7px, rgba(219, 203, 215, 0.5) 12px 12px;
+  box-shadow: rgba(255, 254, 255, 0.5) 10px 10px;
 }
 .project-block .inner-container .image-card-left {
   position: relative;
