@@ -1,9 +1,10 @@
 import React from 'react'
 import Box from '@mui/material/Box';
-import '../../styles/header.css'
+import '../../styles/header.css';
 
 const Header = () => {
   return (
+    <>
     <Box className='header'>
       <div class="bottom-wavy-border">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -13,6 +14,7 @@ const Header = () => {
       </svg>
       </div>
     </Box>
+    </>
   )
 }
 

@@ -48,6 +48,7 @@ function Navbar (props) {
 
   return (
     <Box className='nav' sx={{ display: 'flex' }}>
+      
       <AppBar style={{ background: 'linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95))' }} component="nav">
         <Toolbar>
           <IconButton
@@ -64,9 +65,8 @@ function Navbar (props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <img src='https://img.icons8.com/office/512/instagram-new.png' style={{width: "40px", heiht: "40px"}}/>
-            <img src='https://img.icons8.com/office/512/instagram-new.png' style={{width: "40px", heiht: "40px"}}/>
-            <img src='https://img.icons8.com/office/512/instagram-new.png' style={{width: "40px", heiht: "40px"}}/>
+            <a href='https://github.com/Payameno' target="_blank"><img className='social-icon' src='/media/icons/github.png'/></a>
+            <a href='https://www.linkedin.com/in/beigi-payam/' target="_blank"><img className='social-icon' src='/media/icons/linkedin.png'/></a>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
