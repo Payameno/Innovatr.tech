@@ -66,54 +66,66 @@ const Contact = () => {
   };
 
   return (
-    <div id='Contact' className='contact-section'>
-      <div className='contact-message-body'>
-        <p className='contact-title'>Let's Connect!</p>
-        <p className='contact-message'>
-        I'd love to get connected!
-        Please feel free to send me a message and I'll get back to you shortly...
-        </p>
-      </div>
-        {displayForm ? 
-      <div>
-                <Box
-                className='contact-form'
-                onSubmit={onSubmit}
-                component="form"
-                sx={{
-                  '& .MuiTextField-root': { m: 1, width: '75ch' },
-                }}
-                noValidate
-                autoComplete="off"
-                >
-                    <TextField 
-                    color="secondary" 
-                    required label="Full Name" 
-                    value={toSend.from_name}
-                    name='from_name'
-                    onChange={handleChange}
-                    /><br />
+    <div className='contact-block'>
+      <div class="heading-line"></div>
+      <div id='Contact' className='contact-content'>
+        <div className='contact-message-body'>
+          <p className='contact-title'>Let's Connect!</p>
+          <p className='contact-message'>
+          I'd love to get connected!
+          Please feel free to send me a message and I'll get back to you shortly...
+          </p>
+        </div>
+          {displayForm ? 
+        <div>
+                  <Box
+                  className='contact-form'
+                  onSubmit={onSubmit}
+                  component="form"
+                  sx={{
+                    '& .MuiTextField-root': { m: 1, width: '75ch' },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                  >
                       <TextField 
                       color="secondary" 
-                      required label="Email"
-                      value={toSend.reply_to}
-                      name='reply_to'
+                      required label="Full Name" 
+                      value={toSend.from_name}
+                      name='from_name'
                       onChange={handleChange}
-                      />
-                    <br />
-                    <TextField 
-                    color="secondary" 
-                    multiline
-                    rows={4}
-                    required 
-                    label="Message"
-                    value={toSend.message}
-                    name='message'
-                    onChange={handleChange}
-                    /><br />
-                    {disabled? 
+                      /><br />
+                        <TextField 
+                        color="secondary" 
+                        required label="Email"
+                        value={toSend.reply_to}
+                        name='reply_to'
+                        onChange={handleChange}
+                        />
+                      <br />
+                      <TextField 
+                      color="secondary" 
+                      multiline
+                      rows={4}
+                      required 
+                      label="Message"
+                      value={toSend.message}
+                      name='message'
+                      onChange={handleChange}
+                      /><br />
+                      {disabled? 
+                        <Button
+                        disabled
+                        color="secondary" 
+                        className="contact-button"
+                        type="submit" 
+                        endIcon={<SendIcon />}
+                        variant="contained" 
+                        size="large"
+                        >Submit
+                        </Button>
+                      :
                       <Button
-                      disabled
                       color="secondary" 
                       className="contact-button"
                       type="submit" 
@@ -122,27 +134,18 @@ const Contact = () => {
                       size="large"
                       >Submit
                       </Button>
-                    :
-                    <Button
-                    color="secondary" 
-                    className="contact-button"
-                    type="submit" 
-                    endIcon={<SendIcon />}
-                    variant="contained" 
-                    size="large"
-                    >Submit
-                    </Button>
-                    }
+                      }
 
-                </Box> 
+                  </Box> 
 
+        </div>
+          :
+        <div className='contact-form-submitted'>
+          <p>Thank you! I will get back to you as soon as possible...</p>
+          <Button onClick={resendMessage} color="secondary" variant="contained">Send another message</Button>
+        </div>
+          }
       </div>
-        :
-      <div className='contact-form-submitted'>
-        <p>Thank you! I will get back to you as soon as possible...</p>
-        <Button onClick={resendMessage} color="secondary" variant="contained">Send another message</Button>
-      </div>
-        }
     </div>
   )
 }
