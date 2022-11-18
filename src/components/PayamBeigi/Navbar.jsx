@@ -16,7 +16,7 @@ import Button from '@mui/material/Button';
 import '../../styles/navbar.css'
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Projects', 'Skills', 'Contact', 'About'];
 
 function Navbar (props) {
   const { window } = props;
@@ -67,13 +67,17 @@ function Navbar (props) {
           >
             <a href='https://github.com/Payameno' target="_blank"><img className='social-icon' src='/media/icons/github.png'/></a>
             <a href='https://www.linkedin.com/in/beigi-payam/' target="_blank"><img className='social-icon' src='/media/icons/linkedin.png'/></a>
+            <a href='mailto:beigi.payam@gmail.com' target="_blank"><img className='social-icon' src='/media/icons/email.png'/></a>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
+              <a href={`payambeigi#${item}`}>
+                <Button key={item} sx={{ color: '#fff' }}>
+                  {item}
+                </Button>
+              </a>
+            )
+            )}
           </Box>
         </Toolbar>
       </AppBar>

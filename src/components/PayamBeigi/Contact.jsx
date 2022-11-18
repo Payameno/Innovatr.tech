@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react'
+import { useState } from "react";
 import { send } from 'emailjs-com';
 import validator from 'validator';
 import Box from '@mui/material/Box';
@@ -7,6 +7,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import '../../styles/contact.css'
+
 
 const Contact = () => {
 
@@ -65,7 +66,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='contact-section'>
+    <div id='Contact' className='contact-section'>
       <div className='contact-message-body'>
         <p className='contact-title'>Let's Connect!</p>
         <p className='contact-message'>

@@ -21,7 +21,7 @@ export default function ProjectsBlock() {
   
   return (
     <>
-    <div className='project-container'>
+    <div id='Projects' className='project-container'>
       <div className='project-header'>
         <div className='section-title'>Development Projects</div>
         <div className='toggle-button'>
