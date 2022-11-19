@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import { send } from 'emailjs-com';
+import { styled } from '@mui/material/styles';
 import validator from 'validator';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -8,6 +9,26 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import '../../styles/contact.css'
 
+//custom styles for Mui form
+const CustomTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: 'green',
+  },
+  '& .MuiInput-underline:after': {
+    borderBottomColor: 'green',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'red',
+    },
+    '&:hover fieldset': {
+      borderColor: 'yellow',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: 'green',
+    },
+  },
+});
 
 const Contact = () => {
 
@@ -88,22 +109,22 @@ const Contact = () => {
                   noValidate
                   autoComplete="off"
                   >
-                      <TextField 
+                      <CustomTextField 
                       color="secondary" 
                       required label="Full Name" 
                       value={toSend.from_name}
                       name='from_name'
                       onChange={handleChange}
                       /><br />
-                        <TextField 
-                        color="secondary" 
-                        required label="Email"
-                        value={toSend.reply_to}
-                        name='reply_to'
-                        onChange={handleChange}
-                        />
+                      <CustomTextField 
+                      color="secondary" 
+                      required label="Email"
+                      value={toSend.reply_to}
+                      name='reply_to'
+                      onChange={handleChange}
+                      />
                       <br />
-                      <TextField 
+                      <CustomTextField 
                       color="secondary" 
                       multiline
                       rows={4}
