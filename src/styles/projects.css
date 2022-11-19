@@ -14,6 +14,7 @@
 
 .section-title {
   margin: 0 0 10px 0;
+  padding-bottom: 24px;
   font-size: 50px;
   font-family: "butler-regular";
   animation: fadeInFromTop 1s;
@@ -159,6 +160,10 @@
   cursor: pointer;
   animation: stretch 1s;
   animation-fill-mode: forwards;
+}
+
+.toggle-button-cell {
+  background: white;
 }
 
 .project-description-container {

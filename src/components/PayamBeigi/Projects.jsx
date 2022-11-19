@@ -26,6 +26,7 @@ export default function ProjectsBlock() {
         <div className='section-title'>Development Projects</div>
         <div className='toggle-button'>
         <ToggleButtonGroup
+        className='toggle-button-cell'
         color="secondary" 
         value={alignment}
         exclusive

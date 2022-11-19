@@ -11,24 +11,26 @@ import '../../styles/contact.css'
 
 //custom styles for Mui form
 const CustomTextField = styled(TextField)({
+  background: '#fffcf2',
   '& label.Mui-focused': {
-    color: 'green',
+    color: 'black',
   },
   '& .MuiInput-underline:after': {
-    borderBottomColor: 'green',
+    borderBottomColor: 'purple',
   },
   '& .MuiOutlinedInput-root': {
     '& fieldset': {
-      borderColor: 'red',
+      borderColor: 'purple',
     },
     '&:hover fieldset': {
-      borderColor: 'yellow',
+      borderColor: 'purple',
     },
     '&.Mui-focused fieldset': {
-      borderColor: 'green',
+      borderColor: 'purple',
     },
   },
 });
+
 
 const Contact = () => {
 
@@ -111,6 +113,7 @@ const Contact = () => {
                   >
                       <CustomTextField 
                       color="secondary" 
+                      variant="filled"
                       required label="Full Name" 
                       value={toSend.from_name}
                       name='from_name'
@@ -118,6 +121,7 @@ const Contact = () => {
                       /><br />
                       <CustomTextField 
                       color="secondary" 
+                      variant="filled"
                       required label="Email"
                       value={toSend.reply_to}
                       name='reply_to'
@@ -126,6 +130,7 @@ const Contact = () => {
                       <br />
                       <CustomTextField 
                       color="secondary" 
+                      variant="filled"
                       multiline
                       rows={4}
                       required 
@@ -136,10 +141,8 @@ const Contact = () => {
                       /><br />
                       {disabled? 
                         <Button
-                        disabled
                         color="secondary" 
                         className="contact-button"
-                        type="submit" 
                         endIcon={<SendIcon />}
                         variant="contained" 
                         size="large"
