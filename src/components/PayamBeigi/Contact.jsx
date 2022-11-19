@@ -141,6 +141,7 @@ const Contact = () => {
                       /><br />
                       {disabled? 
                         <Button
+                        disabled
                         color="secondary" 
                         className="contact-button"
                         endIcon={<SendIcon />}

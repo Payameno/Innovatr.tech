@@ -7,7 +7,7 @@ import '../../styles/projects.css'
 
 export default function ProjectsBlock() {
   
-  const [alignment, setAlignment] = React.useState('web');
+  const [alignment, setAlignment] = React.useState('web2');
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
   };
@@ -33,7 +33,7 @@ export default function ProjectsBlock() {
         onChange={handleChange}
         aria-label="Platform"
         >
-        <ToggleButton value="web2">Web 2.0</ToggleButton>
+        <ToggleButton default value="web2">Web 2.0</ToggleButton>
         <ToggleButton value="web3">Web 3.0</ToggleButton>
         </ToggleButtonGroup>
         </div>
