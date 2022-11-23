@@ -5,3 +5,19 @@
   padding: 0;
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
 }
+
+.skill-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10em 0 10em;
+}
+
+.section-title {
+  color: aliceblue;
+  margin: 0 0 10px 0;
+  padding-bottom: 24px;
+  font-size: 50px;
+  font-family: "butler-regular";
+  animation: fadeInFromTop 1s;
+}
